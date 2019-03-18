@@ -3,18 +3,16 @@
     <title>reCAPTCHA demo: Simple page</title>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script type="text/javascript">
-      var onloadCallback = function() {
-        alert("grecaptcha is ready!");
-      };
+      function onSubmit(token) {
+        alert("ready")
+         document.getElementById("demo-form").submit();
+       }
     </script>
   </head>
   <body>
-    <!-- <form action="success.html" method="POST"> -->
-      <div id="haha" class="g-recaptcha" data-sitekey="6LdLFJcUAAAAABSCWu7aPTSOX09rMkJbwKrWhF55" data-callback="onloadCallback"></div>
+    <form id='demo-form' action="success.html" method="POST">
+      <button class="g-recaptcha" data-sitekey="6LeKQZgUAAAAAGFETDvZaIA7kod-DgEDGupNoX_i" data-callback='onSubmit'>Submit</button>
       <br/>
-      <div id="haha" class="g-recaptcha" data-sitekey="6LdLFJcUAAAAABSCWu7aPTSOX09rMkJbwKrWhF55" data-callback="onloadCallback"></div>
-      <br/>
-      <!-- <input type="submit" value="Submit"> -->
-    <!-- </form> -->
+    </form>
   </body>
 </html>
